@@ -57,6 +57,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     /* padding: 10px; */
+    width: 100%;
 }
 
 
@@ -175,6 +176,7 @@ nav img{
     text-align: center;
     padding: 60px;
     color: #fff;
+    width: 95%;
 }
 
 .about-us-section p{
@@ -248,6 +250,8 @@ footer{
     text-align: center;
     padding: 30px;
     margin-top: 5em;
+    width: 100%;
+
 }
 
 footer div{
@@ -277,7 +281,7 @@ footer div img{
         top: 0;
         right: -100%;
         z-index: 10;
-        width: 350px;
+        width: 200px;
 
         background-color: rgb(68, 67, 67);
         transition: right 3s ease-in-out;
@@ -287,7 +291,7 @@ footer div img{
         box-sizing: border-box;
         height: auto;
         width: 100%;
-        padding: 20px 30px;
+        padding: 20px 10px;
         justify-content: flex-start;
     }
 
@@ -316,6 +320,15 @@ footer div img{
     #sidebar-active:checked ~ .links-container .close-sidebar-button svg{
         fill: #FFFDD0;
     }
+
+    #sidebar-active:checked ~ .links-container .links a{
+        color: #FFFDD0;
+    }
+
+    #sidebar-active:checked ~ .links-container .links a svg{
+        fill: #FFFDD0;
+    }
+
 
     nav img{
         width: 10%;
@@ -372,26 +385,10 @@ footer div img{
         width: 100%;
     }
 
-    /* footer{
-        background-color: #FFFDD0;
-        text-align: center;
-        padding: 30px;
-        margin-top: 5em;
-    }
-    
-    footer div{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        margin-top: 40px;
-    }
-    
-    footer div img{
-        width: 7%;
-    } */
 
-    footer div img{
-        width: 20%;
+
+    footer div a img{
+        width: 50%;
     }
     
     
@@ -506,25 +503,7 @@ footer div img{
         width: 100%;
     }
 
-    /* footer{
-        background-color: #FFFDD0;
-        text-align: center;
-        padding: 30px;
-        margin-top: 5em;
-    }
-    
-    footer div{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        margin-top: 40px;
-    }
-    
-    footer div img{
-        width: 7%;
-    } */
-
-    footer div img{
+    footer div a img{
         width: 20%;
     }
     
@@ -640,28 +619,126 @@ footer div img{
         width: 100%;
     }
 
-    /* footer{
-        background-color: #FFFDD0;
-        text-align: center;
-        padding: 30px;
-        margin-top: 5em;
-    }
-    
-    footer div{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        margin-top: 40px;
-    }
-    
-    footer div img{
-        width: 7%;
-    } */
 
-    footer div img{
+    footer div a img{
         width: 20%;
     }
     
+    
+}
+
+@media(max-width: 900px) {
+    nav{
+        /* border: 1px solid red; */
+        flex-direction: row-reverse;
+    }
+    .links-container{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 350px;
+
+        background-color: rgb(68, 67, 67);
+        transition: right 3s ease-in-out;
+    }
+
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    nav a:hover{
+        background-color: #FFFDD0;
+    }   
+
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+        padding:  20px;
+        /* fill: #FFFDD0; */
+    }
+
+    #sidebar-active:checked ~ .links-container{
+        display: flex;
+        right: 0;
+    }
+
+    #sidebar-active:checked ~ .links-container .links{
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        width: 100%;
+    }
+
+    #sidebar-active:checked ~ .links-container .close-sidebar-button svg{
+        fill: #FFFDD0;
+    }
+
+    nav img{
+        width: 10%;
+    }
+
+    .home-section-inner{
+        padding: 0px;
+        padding-top: 90px;
+        height: 450px;
+        width: 100%;
+        text-align: center;
+        /* padding-left: 50px; */
+    }
+
+    .home-section-inner h1{
+        /* width: 80%; */
+        margin: 0 auto;
+        margin: 10px;
+    }
+
+    .home-section-inner p{
+        width: 80%;
+        line-height: 1.7;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .about-us-section{
+        padding: 20px;
+        padding-bottom: 60px;
+    }
+
+    .about-us-section h1{
+        font-size: 30px;
+    }
+
+    .about-us-section p{
+        width: 90%;
+    }
+
+    .gallery-section{
+        padding: 20px;
+    }
+
+    .gallery-section h1{
+        font-size: 30px;
+    }
+
+    .gallery-section-inner{
+        flex-direction: column;
+    }
+
+    .gallery-section-inner div{
+        width: 100%;
+    }
+
+    footer div a img{
+        width: 20%;
+    }
     
 }
 
@@ -691,7 +768,7 @@ footer div img{
         width: 100%;
     }
 
-    footer div img{
+    footer div a img{
         width: 10%;
     }
     
